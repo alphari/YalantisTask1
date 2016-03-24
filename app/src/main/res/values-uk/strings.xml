@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CE-1257218</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="utilities">Комунальне господарство</string>
+    <string name="inwork">В роботі</string>
+    <string name="creation_date">Створено</string>
+    <string name="date_1">25 лютого 2016</string>
+    <string name="registration_date">Зареєстровано</string>
+    <string name="date2">26 лютого 2016</string>
+    <string name="solution_date">Вирішити до</string>
+    <string name="date3">29 лютого 2016</string>
+    <string name="responsible">Відповідальний</string>
+    <string name="dp_mvk">Дніпропетровський МВК()</string>
+    <string name="description">Відкритий люк (біля рекламного щита), район повороту 18 и 19 трамваїв на проспект Мира з Донецького шоссе</string>
+
+</resources>
