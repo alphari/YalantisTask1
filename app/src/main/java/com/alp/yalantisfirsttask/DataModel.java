@@ -19,7 +19,7 @@ package com.alp.yalantisfirsttask;
 /**
  * Created by alphari on 24.03.2016.
  */
-public class DataModel {
+public class DataModel { //[Comment] You don't need this. Use just array of int
     private int imagesUrl;
 
     public DataModel(int imagesUrl){

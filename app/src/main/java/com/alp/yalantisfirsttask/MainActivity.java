@@ -27,13 +27,14 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
+//[Comment] Wrong colors. Missing back button. Wrong top padding
+//[Comment] Images should have same size
 public class MainActivity extends AppCompatActivity {
 
-    private static RecyclerView mRecyclerView;
-    private static RecyclerView.Adapter mAdapter;
+    private static RecyclerView mRecyclerView; //[Comment] Why is it static? It's wrong
+    private static RecyclerView.Adapter mAdapter; //[Comment] Why is it static? It's wrong
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<DataModel> mDataModel;
+    private ArrayList<DataModel> mDataModel; //[Comemnt] Use abstraction instead of realization
 
     private final Integer[] ImagesUrls = {
             R.drawable.dnepr1,
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
         //Arraylist which provide data to Recycler view
         mDataModel = new ArrayList<>();
-        for (int i = 0;i < ImagesUrls.length; i++ ){
+        for (int i = 0;i < ImagesUrls.length; i++ ){ //[Comment] Wrong formatting
             mDataModel.add(new DataModel(ImagesUrls[i]));
         }
         mAdapter = new RecycleViewAdapter(this, mDataModel);
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu); //[Comment] You don't need this
         return true;
     }
 
@@ -97,5 +98,5 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         this.finish();
-    }
+    } //[Comment] You don't need this
 }

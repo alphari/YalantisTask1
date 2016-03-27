@@ -24,7 +24,7 @@ import android.widget.ImageView;
  * Created by alphari on 24.03.2016.
  */
 //Create Recycler view Holder
-public class RecycleViewHolder extends RecyclerView.ViewHolder {
+public class RecycleViewHolder extends RecyclerView.ViewHolder { //[Comment] Should be internal in adapter
     public ImageView mImageView;
 
     public RecycleViewHolder(View itemView) {
