@@ -20,14 +20,12 @@ package com.alp.yalantisfirsttask;
  * Created by alphari on 24.03.2016.
  */
 public class DataModel {
-    private int imagesUrl;
-
-    public DataModel(int imagesUrl){
-        this.imagesUrl = imagesUrl;
-    }
-
-    public int getImagesUrl(){
-        return imagesUrl;
-    }
+    public static final int[] IMAGES = new int[]{
+            R.drawable.dnepr1,
+            R.drawable.dnepr2,
+            R.drawable.dnepr3,
+            R.drawable.dnepr4,
+            R.drawable.dnepr5
+    };
 
 }

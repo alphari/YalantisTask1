@@ -21,42 +21,57 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by alphari on 24.03.2016.
  */
-//Create Recycler view Adapter
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewHolder> {
+//Create Recyclerview Adapter
+public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.RecycleViewHolder> {
 
     private Context mContext;
-    private ArrayList<DataModel> imageslist;
+    private List<Integer> mImagesData;
 
-    public RecycleViewAdapter(Context context, ArrayList<DataModel> imageslist){
+    //Create Recyclerview Holder
+    public static class RecycleViewHolder extends RecyclerView.ViewHolder {
+        public ImageView mImageView;
+
+        public RecycleViewHolder(View itemView) {
+            super(itemView);
+            this.mImageView = (ImageView) itemView.findViewById(R.id.recycler_view_image);
+        }
+    }
+
+
+    public RecycleViewAdapter(Context context, List<Integer> imagesData){
         this.mContext = context;
-        this.imageslist = imageslist;
+        this.mImagesData = imagesData;
     }
 
     @Override
     public RecycleViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recyclerview_item, null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recyclerview_item, viewGroup, false);
         return new RecycleViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(RecycleViewHolder holder, int position) {
-        DataModel dataModel = imageslist.get(position);
 
         Picasso.with(mContext)
-                .load(dataModel.getImagesUrl())
+                .load(mImagesData.get(position))
                 .into(holder.mImageView);
     }
 
     @Override
     public int getItemCount() {
-        return (null != imageslist ? imageslist.size(): 0 );
+        return (null != mImagesData ? mImagesData.size(): 0 );
     }
+
+
+    
 }

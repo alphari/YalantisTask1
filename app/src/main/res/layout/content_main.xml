@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.alp.yalantisfirsttask.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -25,23 +23,24 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
+                android:onClick="onClickToast"
                 android:text="@string/utilities"
                 android:textColor="@color/colorDark"
-                android:textSize="@dimen/font_size"
-                android:onClick="onClickToast"/>
+                android:textSize="@dimen/font_size"/>
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small_margin"
-                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/medium_margin"
                 android:background="@drawable/rounded_orange"
-                android:padding="@dimen/padding"
+                android:onClick="onClickToast"
                 android:text="@string/inwork"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/font_size"
-                android:onClick="onClickToast"/>
+                android:padding="@dimen/padding" />
 
         </LinearLayout>
 
@@ -55,14 +54,14 @@
             <TextView
                 android:id="@+id/textView3"
                 style="@style/Left"
-                android:text="@string/creation_date"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/creation_date"/>
 
             <TextView
                 android:id="@+id/textView4"
                 style="@style/Right"
-                android:text="@string/date_1"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/date_1"/>
 
         </LinearLayout>
 
@@ -76,14 +75,14 @@
             <TextView
                 android:id="@+id/textView5"
                 style="@style/Left"
-                android:text="@string/registration_date"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/registration_date"/>
 
             <TextView
                 android:id="@+id/textView6"
                 style="@style/Right"
-                android:text="@string/date2"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/date2"/>
 
         </LinearLayout>
 
@@ -97,14 +96,14 @@
             <TextView
                 android:id="@+id/textView7"
                 style="@style/Left"
-                android:text="@string/solution_date"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/solution_date"/>
 
             <TextView
                 android:id="@+id/textView8"
                 style="@style/Right"
-                android:text="@string/date3"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/date3"/>
 
         </LinearLayout>
 
@@ -118,14 +117,14 @@
             <TextView
                 android:id="@+id/textView9"
                 style="@style/Left"
-                android:text="@string/responsible"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/responsible"/>
 
             <TextView
                 android:id="@+id/textView10"
                 style="@style/Right"
-                android:text="@string/dp_mvk"
-                android:onClick="onClickToast"/>
+                android:onClick="onClickToast"
+                android:text="@string/dp_mvk"/>
 
         </LinearLayout>
 
@@ -137,10 +136,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/small_margin"
             android:layout_marginTop="@dimen/small_margin"
-            android:textColor="@color/colorDark"
             android:onClick="onClickToast"
-            android:textSize="@dimen/font_size"
             android:text="@string/description"
+            android:textColor="@color/colorDark"
+            android:textSize="@dimen/font_size"
             />
 
         <android.support.v7.widget.RecyclerView

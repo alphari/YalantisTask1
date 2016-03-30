@@ -27,50 +27,29 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static RecyclerView mRecyclerView;
-    private static RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<DataModel> mDataModel;
-
-    private final Integer[] ImagesUrls = {
-            R.drawable.dnepr1,
-            R.drawable.dnepr2,
-            R.drawable.dnepr3,
-            R.drawable.dnepr4,
-            R.drawable.dnepr5
-    };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Set toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        //Set Recycler view
-        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        //Set Recyclerview
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        //Arraylist which provide data to Recycler view
-        mDataModel = new ArrayList<>();
-        for (int i = 0;i < ImagesUrls.length; i++ ){
-            mDataModel.add(new DataModel(ImagesUrls[i]));
-        }
-        mAdapter = new RecycleViewAdapter(this, mDataModel);
+        //Initialize Arraylist which provide data to Recyclerview
+        List<Integer> mDataModel = new ArrayList<>(Arrays.asList(DataModel.IMAGES));
+        RecyclerView.Adapter mAdapter = new RecycleViewAdapter(this, mDataModel);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
     }
 
     @Override
@@ -91,11 +70,5 @@ public class MainActivity extends AppCompatActivity {
     //Show toast when press any control
     public void onClickToast(View view) {
         Toast.makeText(this, view.getClass().getSimpleName(), Toast.LENGTH_SHORT).show();
-    }
-
-    //Back Button close application
-    @Override
-    public void onBackPressed() {
-        this.finish();
     }
 }
