@@ -20,7 +20,7 @@ package com.alp.yalantisfirsttask;
  * Created by alphari on 24.03.2016.
  */
 public class DataModel {
-    public static final int[] IMAGES = new int[]{
+    public static final Integer[] IMAGES = new Integer[]{
             R.drawable.dnepr1,
             R.drawable.dnepr2,
             R.drawable.dnepr3,
