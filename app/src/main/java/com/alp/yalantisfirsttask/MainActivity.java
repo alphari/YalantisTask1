@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
         //Initialize Arraylist which provide data to Recyclerview
-        List<Integer> mDataModel = Arrays.asList(DataModel.IMAGES);
-        RecyclerView.Adapter mAdapter = new RecycleViewAdapter(this, mDataModel);
+        List<Integer> mImages = DataModel.createImagesList();
+        RecyclerView.Adapter mAdapter = new RecycleViewAdapter(this, mImages);
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
 

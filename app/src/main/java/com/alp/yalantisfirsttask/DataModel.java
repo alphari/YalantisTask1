@@ -16,6 +16,10 @@
 
 package com.alp.yalantisfirsttask;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by alphari on 24.03.2016.
  */
@@ -27,5 +31,10 @@ public class DataModel {
             R.drawable.dnepr4,
             R.drawable.dnepr5
     };
+
+    public static List<Integer> createImagesList(){
+        List<Integer> images = new ArrayList<>(Arrays.asList(DataModel.IMAGES));
+        return images;
+    }
 
 }
