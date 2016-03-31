@@ -40,8 +40,8 @@
                 android:text="@string/inwork"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/font_size"
-                android:paddingTop="@dimen/padding"
-                android:paddingBottom="@dimen/padding"
+                android:paddingTop="@dimen/top_padding"
+                android:paddingBottom="@dimen/top_padding"
                 android:paddingLeft="@dimen/side_padding"
                 android:paddingRight="@dimen/side_padding"/>
 
@@ -137,8 +137,8 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/small_margin"
-            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
             android:onClick="onClickToast"
             android:text="@string/description"
             android:textColor="@color/colorDark"
