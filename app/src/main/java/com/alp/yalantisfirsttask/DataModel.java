@@ -33,7 +33,7 @@ public class DataModel {
     };
 
     public static List<Integer> createImagesList(){
-        List<Integer> images = new ArrayList<>(Arrays.asList(DataModel.IMAGES));
+        List<Integer> images = new ArrayList<>(Arrays.asList(IMAGES));
         return images;
     }
 
