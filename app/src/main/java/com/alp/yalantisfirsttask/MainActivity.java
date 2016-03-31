@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //Set toolbar
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //Set Recyclerview
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);

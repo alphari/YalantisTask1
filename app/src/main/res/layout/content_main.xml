@@ -40,7 +40,10 @@
                 android:text="@string/inwork"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/font_size"
-                android:padding="@dimen/padding" />
+                android:paddingTop="@dimen/padding"
+                android:paddingBottom="@dimen/padding"
+                android:paddingLeft="@dimen/side_padding"
+                android:paddingRight="@dimen/side_padding"/>
 
         </LinearLayout>
 
